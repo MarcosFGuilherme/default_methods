@@ -2,7 +2,8 @@ package application;
 
 import java.util.Scanner;
 
-import model.service.BrazilInterestService;
+import model.interfaces.InterestService;
+import model.service.UsaInterestService;
 
 public class Program {
 
@@ -14,7 +15,7 @@ public class Program {
 		System.out.print("Months: ");
 		int months = sc.nextInt();
 		
-		BrazilInterestService is = new BrazilInterestService(2.0);
+		InterestService is = new UsaInterestService(1.0);
 		
 		System.out.println("Contract : [" + String.format("%.2f", amount) + ", " + months + "]");
 		System.out.println("Payment after 3 months:");
